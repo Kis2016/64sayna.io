@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Баня «Эх, Банька!» – Уютные сауны с акциями в Саратове</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="script" href="script.js">
+</head>
+<body>
+  <header>
+    <h1>Баня «Эх, Банька!»</h1>
+    <p>Отдохните и расслабьтесь в уютной сауне с натуральным паром</p>
+    <nav>
+      <a href="#contacts">Контакты</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>О нас</h2>
+      <p>Добро пожаловать в нашу сауну — идеальное место для отдыха и восстановления сил! У нас вы найдете уютные русскую и римскую бани, где сможете насладиться традиционным паром и расслабляющей атмосферой. В стоимость аренды сауны входят бассейн с подогревом и живописным водопадом, караоке для любителей развлечений и гидромассаж, который подарит приятное расслабление мышцам. В просторной комнате отдыха можно отдохнуть после процедур, а зона мангала станет отличным местом для встреч с друзьями и активного времяпрепровождения. Мы заботимся о вашем комфорте: предоставляем тапочки и полотенца, а также предлагаем гостям чай, кофе и воду. Также вы можете приносить свои веники для более индивидуального парения. Обратите внимание, что бронирование возможно от двух часов и более. Приходите к нам, чтобы провести время с пользой для тела и души!</p>
+    </section>
+    
+    <section id="services" class="services">
+      <div class="service">
+        <h2>Услуги</h2>
+        <ul>
+          <li>Русская баня</li>
+          <li>Римская баня</li>
+          <li>Гидромассаж</li>
+          <li>Комната отдыха</li>
+          <li>Караоке</li>
+          <li>Бассейн с подогревом</li>
+          <li>Бассейн с водопадом</li>
+          <li>Бронирование возможно от двух часов и более</li>
+        </ul>
+      </div>
+      <div class="service">
+        <h2>Цены</h2>
+        <table>
+          <thead>
+            <tr><th>Услуга</th><th>Цена</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Маленький зал за час </td><td>1000 ₽</td></tr>
+            <tr><td>Большой зал за час </td><td>1500 ₽</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Новый раздел "Акции и подарки" -->
+    <section id="promotions">
+      <div class="service">
+      <h2>Акции, скидки и подарки</h2>
+      <ul>
+        <li>Счастливые часы, Скидка 20% в будни с 10 до 15 часов</li>
+        <li>На день рождение, имениннику 1 час в подарок, акция действует за три дня до и после дня рождения.</li>
+        <li>При бронировании в будни от 10 часов, скидка 30%</li>
+        <li>При бронировании в выходные от 10 часов, скидка 15%</li>
+      </ul>
+        </div>
+    </section>
+
+    <section id="photos">
+      <h2>Фотогалерея</h2>
+      <div class="photo-gallery">
+        <img src="images/1.jpg" alt="Фото 1" />
+        <img src="images/2.jpg" alt="Фото 2" />
+        <img src="images/3.jpg" alt="Фото 3" />
+        <img src="images/4.jpg" alt="Фото 4" />
+        <img src="images/5.jpg" alt="Фото 5" />
+        <img src="images/6.jpg" alt="Фото 6" />
+        <img src="images/7.jpg" alt="Фото 7" />
+        <img src="images/8.jpg" alt="Фото 8" />
+        <img src="images/9.jpg" alt="Фото 9" />
+        <img src="images/10.jpg" alt="Фото 10" />
+        <img src="images/11.jpg" alt="Фото 11" />
+        <img src="images/12.jpg" alt="Фото 12" />
+        <img src="images/13.jpg" alt="Фото 13"  />
+      </div>
+
+      <!-- Модальное окно -->
+      <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-img" />
+        <div id="caption"></div>
+      </div>
+    </section>
+
+    <!-- Вставляем карту Google -->
+    <div style="margin-top:20px;">
+      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A2bfbc8d97868cee9f55a093189fd9dfd370d3dbe986559a0b186f949b402740f&amp;source=constructor" width="600" height="450" frameborder="0"></iframe>
+    </div>
+
+    <section id="contacts">
+      <h2>Контакты</h2>
+      <p><strong>Адрес:</strong> г. Саратов, район Фрунзенский, ул. 2-й Детский проезд, д.62/68, 1 этаж</p>
+      <p><strong>Телефон:</strong> +7 (8452) 21-25-25</p>
+      <p><strong>Телефон:</strong> +7 (967) 501-25-25</p>
+      <p><strong>Время работы:</strong> Круглосуточно</p>
+     
+    </section>
+  </main>
+  <script>
+    function openModal(img) {
+      const modal = document.getElementById('modal');
+      const modalImg = document.getElementById('modal-img');
+      const captionText = document.getElementById('caption');
+
+      modal.style.display = "block";
+      modalImg.src = img.src;
+      captionText.innerHTML = img.alt;
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('modal');
+      modal.style.display = "none";
+    }
+  </script>
+
+  <footer>
+    &copy; 2025 Сауна «Баня Эх, Банька!». Все права защищены.
+  </footer>
+
+</body>
+</html>

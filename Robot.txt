@@ -1,0 +1,15 @@
+``plaintext
+# Разрешаем всем поисковым роботам индексировать весь сайт
+User-agent: *
+Disallow:
+
+# Запрещаем всем роботам доступ к папке admin
+User-agent: *
+Disallow: /admin/
+
+# Запрещаем всем роботам доступ к приватной папке
+User-agent: *
+Disallow: /private/
+
+# Указываем расположение карты сайта
+Sitemap: https://cw7891345140.tw1.ru/sitemap.xml
